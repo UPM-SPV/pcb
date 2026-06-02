@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+!COPYING
+!README.md
+
+!nrf54l15.kicad_sch
+!sensor_node.kicad_pcb
+!sensor_node.kicad_pro
+!sensor_node.kicad_sch
+
+!readme/
+!readme/**
+
+!extern/
+!extern/**
