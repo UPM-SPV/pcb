@@ -5,6 +5,8 @@
 	(uuid "3ed28607-38b4-46f4-9c9c-4a5a0dfdb398")
 	(paper "A4")
 	(title_block
+		(title "Sistema de Supervisión Ambiental")
+		(date "2026")
 		(rev "v0.1")
 	)
 	(lib_symbols
