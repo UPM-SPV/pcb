@@ -1100,13 +1100,9 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Mechanical:MountingHole"
 			(pin_names
 				(offset 1.016)
-				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom no)
@@ -1114,7 +1110,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "H"
-				(at 0 6.35 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1123,8 +1119,8 @@
 					)
 				)
 			)
-			(property "Value" "MountingHole_Pad"
-				(at 0 4.445 0)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1155,7 +1151,7 @@
 					)
 				)
 			)
-			(property "Description" "Mounting Hole with connection"
+			(property "Description" "Mounting Hole without connection"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1177,7 +1173,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*Pad*"
+			(property "ki_fp_filters" "MountingHole*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1188,9 +1184,9 @@
 					)
 				)
 			)
-			(symbol "MountingHole_Pad_0_1"
+			(symbol "MountingHole_0_1"
 				(circle
-					(center 0 1.27)
+					(center 0 0)
 					(radius 1.27)
 					(stroke
 						(width 1.27)
@@ -1198,26 +1194,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-			)
-			(symbol "MountingHole_Pad_1_1"
-				(pin input line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 			)
@@ -4196,7 +4172,7 @@
 	)
 	(rectangle
 		(start 107.95 111.125)
-		(end 130.81 127.635)
+		(end 125.095 127.635)
 		(stroke
 			(width 0)
 			(type default)
@@ -4500,12 +4476,6 @@
 		(uuid "46126d61-10d6-40e7-bb28-322c6d45cd1e")
 	)
 	(junction
-		(at 119.38 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "48d820f9-aea8-452b-bfcd-00f6553077d3")
-	)
-	(junction
 		(at 167.64 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4624,12 +4594,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ae931299-fbed-4158-a166-f48d4819f0f5")
-	)
-	(junction
-		(at 110.49 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b0c2f281-55d7-4cd4-860f-78cea5c2d3e6")
 	)
 	(junction
 		(at 140.97 52.07)
@@ -5483,16 +5447,6 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 118.11) (xy 110.49 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "592695f7-4c43-4374-8a83-3e833d6645c2")
-	)
-	(wire
-		(pts
 			(xy 220.98 143.51) (xy 220.98 144.78)
 		)
 		(stroke
@@ -5530,16 +5484,6 @@
 			(type default)
 		)
 		(uuid "5e3b768c-32d1-458b-ac90-f56233ba794d")
-	)
-	(wire
-		(pts
-			(xy 119.38 119.38) (xy 128.27 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "616a2b9d-058b-44d2-913e-9354eae01d23")
 	)
 	(wire
 		(pts
@@ -5781,16 +5725,6 @@
 		)
 		(uuid "7fe28256-5bb9-4cec-8334-e162136c976e")
 	)
-	(wire
-		(pts
-			(xy 110.49 119.38) (xy 119.38 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "807bab52-e8ec-42c6-afd5-a4d35158bdb5")
-	)
 	(polyline
 		(pts
 			(xy 170.18 59.69) (xy 182.88 59.69)
@@ -6003,26 +5937,6 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 119.38) (xy 110.49 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d648af0-2c05-4f86-acf4-1f46d20d4466")
-	)
-	(wire
-		(pts
-			(xy 128.27 119.38) (xy 128.27 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e572c60-7f64-4e27-8377-5937495876b1")
-	)
-	(wire
-		(pts
 			(xy 143.51 33.02) (xy 143.51 43.18)
 		)
 		(stroke
@@ -6110,16 +6024,6 @@
 			(type default)
 		)
 		(uuid "ae1f89fa-c975-4553-bf27-002f8b29d582")
-	)
-	(wire
-		(pts
-			(xy 119.38 119.38) (xy 119.38 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae35a5d4-68f1-4d5c-8ca2-5d1d435c7e60")
 	)
 	(wire
 		(pts
@@ -6732,16 +6636,6 @@
 			(color 255 0 0 1)
 		)
 		(uuid "ef64ec64-9732-49ca-9e9f-9dba580efcbe")
-	)
-	(wire
-		(pts
-			(xy 119.38 118.11) (xy 119.38 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f01decc6-3ec4-4b92-818e-d1d5680227e0")
 	)
 	(wire
 		(pts
@@ -9475,7 +9369,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
+		(lib_id "Mechanical:MountingHole")
 		(at 119.38 123.19 180)
 		(unit 1)
 		(body_style 1)
@@ -9487,7 +9381,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e11e81e-7c43-4167-bf36-cc144ca35e0f")
 		(property "Reference" "H4"
-			(at 121.92 123.1899 0)
+			(at 121.92 121.9199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9498,7 +9392,7 @@
 			)
 		)
 		(property "Value" "BR"
-			(at 121.92 125.7299 0)
+			(at 121.92 124.4599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9508,7 +9402,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
 			(at 119.38 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -9530,7 +9424,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" "Mounting Hole without connection"
 			(at 119.38 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -9551,9 +9445,6 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "b15615f3-9749-44b0-9a3a-bb46cc81f845")
 		)
 		(instances
 			(project "sensor_node"
@@ -11546,86 +11437,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 128.27 120.65 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "62f24a28-6598-4b4f-b40b-8b63289704dd")
-		(property "Reference" "#PWR043"
-			(at 128.27 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 128.27 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
-			(at 128.27 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e685e5ff-14d1-4b86-b664-b13bb8f217ba")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd"
-					(reference "#PWR043")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 63.5 123.19 270)
 		(mirror x)
@@ -12435,7 +12246,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
+		(lib_id "Mechanical:MountingHole")
 		(at 110.49 123.19 180)
 		(unit 1)
 		(body_style 1)
@@ -12447,7 +12258,7 @@
 		(fields_autoplaced yes)
 		(uuid "7fb41b93-080b-4c88-a8f3-cfd849362c3a")
 		(property "Reference" "H3"
-			(at 113.03 123.1899 0)
+			(at 113.03 121.9199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12458,7 +12269,7 @@
 			)
 		)
 		(property "Value" "BL"
-			(at 113.03 125.7299 0)
+			(at 113.03 124.4599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12468,7 +12279,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
 			(at 110.49 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -12490,7 +12301,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" "Mounting Hole without connection"
 			(at 110.49 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -12511,9 +12322,6 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "6b6a195e-d15d-4c33-9373-e8ff6cd1ab10")
 		)
 		(instances
 			(project "sensor_node"
@@ -15851,7 +15659,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
+		(lib_id "Mechanical:MountingHole")
 		(at 110.49 115.57 0)
 		(unit 1)
 		(body_style 1)
@@ -15863,7 +15671,7 @@
 		(fields_autoplaced yes)
 		(uuid "e46290d3-c226-4c6d-a237-ff53145fb2d4")
 		(property "Reference" "H1"
-			(at 113.03 113.0299 0)
+			(at 113.03 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15874,7 +15682,7 @@
 			)
 		)
 		(property "Value" "TL"
-			(at 113.03 115.5699 0)
+			(at 113.03 116.8399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15884,7 +15692,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
 			(at 110.49 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -15906,7 +15714,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" "Mounting Hole without connection"
 			(at 110.49 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -15927,9 +15735,6 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "c50ca50c-5e69-4d5a-a9d9-f55cbe0f61fa")
 		)
 		(instances
 			(project "sensor_node"
@@ -16404,7 +16209,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
+		(lib_id "Mechanical:MountingHole")
 		(at 119.38 115.57 0)
 		(unit 1)
 		(body_style 1)
@@ -16416,7 +16221,7 @@
 		(fields_autoplaced yes)
 		(uuid "f80b9c23-8759-4233-b1f4-6f6eb55c8116")
 		(property "Reference" "H2"
-			(at 121.92 113.0299 0)
+			(at 121.92 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16427,7 +16232,7 @@
 			)
 		)
 		(property "Value" "TR"
-			(at 121.92 115.5699 0)
+			(at 121.92 116.8399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16437,7 +16242,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
 			(at 119.38 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -16459,7 +16264,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" "Mounting Hole without connection"
 			(at 119.38 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -16480,9 +16285,6 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "67d6e880-4222-4392-8aed-58b23e27323e")
 		)
 		(instances
 			(project "sensor_node"
