@@ -1,0 +1,141 @@
+name: Continuous Integration
+
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+
+jobs:
+  ci:
+    name: Continuous Integration
+
+    runs-on: [self-hosted, Linux, x64]
+    container:
+      image: kicad/kicad:10.0.8-full
+      options: --user root
+    steps:
+      - parallel:
+        - name: Checkout old master version
+          uses: actions/checkout@v7
+          with:
+            path: old/
+            fetch-depth: 2
+            ref: master
+
+        - name: Checkout incoming changes (new)
+          uses: actions/checkout@v7
+          with:
+            path: new/
+
+      - name: Wait for checkout
+        wait-all:
+
+      - name: Update master HEAD
+        if: github.event_name == 'push'
+        run: |
+          # If triggered by a push to master, set the "old"
+          # HEAD to the previous commit.
+          # If triggered by a PR, keep it as is.
+          cd old/
+          git checkout HEAD^1
+
+      - name: Check CI/CD root
+        run: |
+          # Always use the master tools/ directory.
+          #   - If triggered by a push, use new/tools/ (master)
+          #   - If triggered by a PR, use old/tools/ (master)
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "TOOLS_PATH=$(pwd)/new/tools/" >> "$GITHUB_ENV"
+          else
+            echo "TOOLS_PATH=$(pwd)/old/tools/" >> "$GITHUB_ENV"
+          fi
+
+      - name: Find project files
+        run: |
+          OLD_KICAD_PRO="$(find old/ -name '*.kicad_pro' | head -n1)"
+          NEW_KICAD_PRO="$(find new/ -name '*.kicad_pro' | head -n1)"
+          echo "OLD_KICAD_PRO=$(realpath ${OLD_KICAD_PRO})" >> "$GITHUB_ENV"
+          echo "NEW_KICAD_PRO=$(realpath ${NEW_KICAD_PRO})" >> "$GITHUB_ENV"
+
+      - name: Install Dependencies
+        run: |
+            sudo apt update
+            sudo apt install --yes imagemagick inkscape xvfb fonts-noto-core python3-pip
+            pip install --break-system-packages -r "${TOOLS_PATH}/requirements.txt"
+
+      - parallel:
+        - name: Generate visual diff
+          run: |
+            mkdir -p output/
+            python3 "${TOOLS_PATH}/kicad-tool.py" diff \
+              --before-pro-file "${OLD_KICAD_PRO}" \
+              --after-pro-file "${NEW_KICAD_PRO}" \
+              --output-format md \
+              --output output/ \
+              --sch \
+              --pcb
+
+        - name: Generate fabrication outputs
+          run: |
+            mkdir -p output/
+            python3 "${TOOLS_PATH}/kicad-tool.py" fab \
+              --pro-file "${NEW_KICAD_PRO}" \
+              --output-format md \
+              --output output/ \
+              --grb \
+              --bom --bom-jlcpcb \
+              --pos --pos-jlcpcb \
+              --schematic
+
+        - name: Run rules checking
+          run: |
+            mkdir -p output/
+            python3 "${TOOLS_PATH}/kicad-tool.py" rc \
+              --pro-file "${NEW_KICAD_PRO}" \
+              --output-format md \
+              --output output/rc-report.md \
+              --summary output/rc-summary \
+              --erc \
+              --drc
+
+        - name: Generate 3D renders
+          run: |
+            mkdir -p output/
+            python3 "${TOOLS_PATH}/kicad-tool.py" render \
+              --pro-file "${NEW_KICAD_PRO}" \
+              --output-format md \
+              --output output/ \
+              --image \
+              --step
+
+      - name: Wait for reports
+        wait-all:
+
+      - name: Merge reports
+        run: |
+          cat \
+            output/rc-report.md \
+            output/diff-report.md \
+            output/render-report.md \
+            > output/full-report.md
+
+      - name: Upload report results
+        uses: actions/upload-artifact@v7
+        with:
+          name: ci-report
+          path: output/
+          if-no-files-found: error
+
+      - name: Check results
+        run: |
+          . output/rc-summary
+          if [ "${RC_AGGREGATE}" = "error" ]; then
+            exit 1
+          fi
