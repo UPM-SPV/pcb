@@ -42,3 +42,64 @@ def drc(kicad_pro_path: str) -> DrcReport:
 	os.remove(drc_filename)
 	return drc_report
 
+
+def grb(kicad_pro_path: str, output_path: str) -> None:
+	pcb_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_pcb")
+	subprocess.run(
+		[
+			"kicad-cli", "pcb", "export", "gerbers",
+			"--output", output_path,
+			pcb_filename
+		],
+		stdout = sys.stderr
+	)
+	subprocess.run(
+		[
+			"kicad-cli", "pcb", "export", "drill",
+			"--output", output_path,
+			pcb_filename
+		],
+		stdout = sys.stderr
+	)
+
+
+def pos(kicad_pro_path: str, output_path: str) -> None:
+	pcb_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_pcb")
+	subprocess.run(
+		[
+			"kicad-cli", "pcb", "export", "pos",
+			"--format", "csv",
+			"--units", "mm",
+			"--exclude-dnp",
+			"--output", output_path,
+			pcb_filename
+		],
+		stdout = sys.stderr
+	)
+
+
+def bom(kicad_pro_path: str, output_path: str) -> None:
+	sch_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_sch")
+	subprocess.run(
+		[
+			"kicad-cli", "sch", "export", "bom",
+			"--output", output_path,
+			"--fields", "*",
+			"--group-by", "Value,Footprint",
+			"--exclude-dnp",
+			sch_filename
+		],
+		stdout = sys.stderr
+	)
+
+
+def export_sch(kicad_pro_path: str, output_path: str) -> None:
+	sch_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_sch")
+	subprocess.run(
+		[
+			"kicad-cli", "sch", "export", "pdf",
+			"--output", output_path,
+			sch_filename
+		],
+		stdout = sys.stderr
+	)
