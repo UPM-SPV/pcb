@@ -14,3 +14,7 @@
 
 !extern/
 !extern/**
+
+!tools/
+!tools/**
+__pycache__
