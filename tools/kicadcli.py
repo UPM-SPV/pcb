@@ -103,3 +103,45 @@ def export_sch(kicad_pro_path: str, output_path: str) -> None:
 		],
 		stdout = sys.stderr
 	)
+
+
+def render_step(kicad_pro_path: str, output_path: str) -> None:
+	pcb_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_pcb")
+	subprocess.run(
+		[
+			"kicad-cli", "pcb", "export", "step",
+			"--no-dnp",
+			"--output", output_path,
+			pcb_filename
+		],
+		stdout = sys.stderr
+	)
+
+
+def render_3d(kicad_pro_path: str, output_path: str, side: str, width: int, height: int) -> None:
+	pcb_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_pcb")
+	subprocess.run(
+		[
+			"xvfb-run", "-a", "kicad-cli", "pcb", "render",
+			"--side", side,
+			"--width", str(width),
+			"--height", str(height),
+			"--quality", "user",
+			"--background", "transparent",
+			"--preset", "3d_render",
+			"--output", output_path,
+			pcb_filename
+		],
+		stdout = sys.stderr
+	)
+	subprocess.run(
+		[
+			"magick",
+			output_path,
+			"-trim", "+repage",
+			"-bordercolor", "transparent",
+			"-border", "20",
+			output_path,
+		],
+		stdout = sys.stderr
+	)
