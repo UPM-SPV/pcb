@@ -2,6 +2,7 @@
 
 import click
 from rc import rc
+from diff import diff
 from fab import fab
 from render import render
 
@@ -10,6 +11,7 @@ def cli():
 	pass
 
 cli.add_command(rc)
+cli.add_command(diff)
 cli.add_command(fab)
 cli.add_command(render)
 

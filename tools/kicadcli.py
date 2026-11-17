@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 
 from __future__ import annotations
+import click
+import cv2
+import numpy as np
 import os
 import pathlib
+import shutil
 import subprocess
+import sys
 import tempfile
+from typing import Dict, List
 
 from kicadrc import DrcReport, ErcReport
 
@@ -145,3 +151,54 @@ def render_3d(kicad_pro_path: str, output_path: str, side: str, width: int, heig
 		],
 		stdout = sys.stderr
 	)
+
+
+def render_sch(kicad_pro_path: str) -> Dict[str, List[np.ndarray]]:
+	sch_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_sch")
+	return _kicad_render(
+		sch_filename,
+		["kicad-cli", "sch", "export", "svg"]
+	)
+
+
+def render_pcb(kicad_pro_path: str, layers: str) -> Dict[str, List[np.ndarray]]:
+	pcb_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_pcb")
+	return _kicad_render(
+		pcb_filename,
+		[
+			"kicad-cli", "pcb", "export", "svg",
+			"--layers", layers,
+			"--mode-multi"
+		]
+	)
+
+
+def _kicad_render(root_file: pathlib.Path, command: List[str]) -> Dict[str, List[np.ndarray]]:
+	tempdir = tempfile.mkdtemp()
+
+	subprocess.run(
+		[
+			*command,
+			"--output", tempdir,
+			root_file
+		]
+	)
+
+	project_name = pathlib.Path(root_file).with_suffix("").stem
+	images = {}
+	for svg_file in os.listdir(tempdir):
+		object_name = pathlib.Path(svg_file).stem
+		png_file = pathlib.Path(svg_file).with_suffix("").with_suffix(".png")
+		click.echo(f"	Converting {click.style(object_name, fg='blue')} to PNG", err=True)
+		subprocess.run(
+			[
+				"magick",
+				"-density", "1000",
+				f"{tempdir}/{svg_file}", f"{tempdir}/{png_file}"
+			]
+		)
+		image = cv2.imread(f"{tempdir}/{png_file}", cv2.IMREAD_GRAYSCALE)
+		images[object_name.removeprefix(f"{project_name}-")] = image
+
+	shutil.rmtree(tempdir)
+	return images
