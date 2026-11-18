@@ -1,6 +1,7 @@
 <div align="center">
 
 # $SPV\ board$
+[![Continuous Integration](https://github.com/UPM-SPV/pcb/actions/workflows/ci.yml/badge.svg)](https://github.com/UPM-SPV/pcb/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/UPM-SPV/pcb)](https://github.com/UPM-SPV/pcb/releases)
 [![License](https://img.shields.io/github/license/UPM-SPV/pcb)](https://github.com/UPM-SPV/pcb/blob/master/LICENSE)
 
