@@ -660,7 +660,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -710,7 +710,7 @@
 						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -9746,7 +9746,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 220.98 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10112,7 +10112,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Footprints:SHTC3"
+		(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4-1EP_2x2mm_P1mm_EP0.7x1.6mm"
 			(at 198.12 121.412 0)
 			(hide yes)
 			(show_name no)
@@ -10259,7 +10259,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 133.35 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -12780,7 +12780,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 54.61 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -13111,7 +13111,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 214.63 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -14480,7 +14480,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 222.25 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -14559,7 +14559,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 213.36 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -14827,7 +14827,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 133.35 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -15556,7 +15556,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 76.2 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -15635,7 +15635,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 213.36 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -16352,7 +16352,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
 			(at 76.2 90.17 0)
 			(hide yes)
 			(show_name no)
