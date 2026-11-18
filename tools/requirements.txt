@@ -1,6 +1,6 @@
 click>=8.5
 dominate>=3.1
-numpy>=2.2
+numpy>=2.5.4
 opencv_python>=5.0.0
 pandas>=3.1
 snakemd>=2.4
