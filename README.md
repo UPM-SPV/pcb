@@ -7,7 +7,7 @@
 
 </div>
 
-| ![Front view of a PCB. A microcontroller and sensors are visible in the center, while a trace antenna, 2.54 mm connectors, and the project's attribution are visible on the outer edges](readme/pcb_3d_front.png) | ![Back view of a PCB, containing a battery holder and a university logo](readme/pcb_3d_back.png) |
+| ![Front view of a PCB. A microcontroller and sensors are visible in the center, while a trace antenna, 2.54 mm connectors, and the project's attribution are visible on the outer edges](../../releases/latest/download/board_top.png) | ![Back view of a PCB, containing a battery holder and a university logo](../../releases/latest/download/board_bottom.png) |
 |--|--|
 
 This is the PCB I designed for my undergrad [thesis](https://www.boe.es/buscar/act.php?id=BOE-A-2021-15781). It's a four-layer board consisting of an [nRF54L15](https://www.nordicsemi.com/Products/nRF54L15), multiple environmental sensors, an LED, and a button, all powered by a single CR2450 battery on the back.
