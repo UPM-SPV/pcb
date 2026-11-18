@@ -869,7 +869,9 @@
       "nRF54L15"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "REV": "0.1.0"
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0

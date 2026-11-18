@@ -19,5 +19,7 @@
 !tools/**
 __pycache__
 
+!release-please-config.json
+!.release-please-manifest.json
 !.github/
 !.github/**

@@ -1,0 +1,78 @@
+name: Release
+
+
+on:
+  workflow_run:
+    workflows: ["Continuous Integration"]
+    types:
+      - completed
+    branches:
+      - main
+      - master
+
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+
+jobs:
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release_please.outputs.release_created }}
+      tag_name: ${{ steps.release_please.outputs.tag_name }}
+    steps:
+      - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+
+      - name: Release Please
+        id: release_please
+        uses: googleapis/release-please-action@v5
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          target-branch: master
+
+
+  publish-release:
+    name: Publish release
+
+    needs:
+      - release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+
+      - name: Fetch fabrication artifacts
+        uses: actions/download-artifact@v8
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ steps.app-token.outputs.token }}
+          name: ci-report
+          path: ci-report
+
+      - name: Upload fabrication outputs
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          cd ci-report/
+          gh release upload \
+            --repo="${{ github.repository }}" \
+            "${{ needs.release-please.outputs.tag_name }}" \
+            board_top.png board_bottom.png board.step \
+            grb.zip \
+            bom.csv bom_jlcpcb.csv \
+            pos.csv pos_jlcpcb.csv

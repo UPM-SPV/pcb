@@ -1,0 +1,33 @@
+{
+	"packages": {
+		".": {
+			"release-type": "simple",
+			"separate-pull-requests": false,
+			"bump-minor-pre-major": true,
+			"bump-patch-for-minor-pre-major": true,
+			"pull-request-title-pattern": "chore: release ${version}",
+			"pull-request-header": "Hey, I've just pulled together a new release.",
+			"pull-request-footer": "This PR was generated automatically.",
+			"include-commit-authors": true,
+			"changelog-sections": [
+				{"type": "pcbfeat", "section": "New PCB features"},
+				{"type": "errata", "section": "Fixed errata"},
+				{"type": "pcbfix", "section": "Minor PCB fixes"},
+				{"type": "docs", "section": "Documentation", "hidden": false},
+				{"type": "feat", "section": "Other features"},
+				{"type": "fix", "section": "Bug fixes"},
+				{"type": "deps", "section": "Dependency updates"},
+				{"type": "chore", "section": "Maintenance"},
+				{"type": "test", "section": "Tests"}
+			],
+			"extra-files": [
+				{
+					"type": "json",
+					"path": "sensor_node.kicad_pro",
+					"jsonpath": "$.text_variables.REV"
+				}
+			]
+		}
+	},
+	"$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
