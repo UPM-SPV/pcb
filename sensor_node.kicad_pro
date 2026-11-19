@@ -76,40 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "clearance|171594773|143500000|7dff5242-5b28-41f0-935d-ed0e7f2ccb56|a95c7ae4-4636-4d44-8d59-f86e62d575d3",
-          ""
-        ],
-        [
-          "clearance|203615643|132932238|0522f01c-d304-499b-a4cf-b7f3060aa42e|bc6be332-1cfd-4997-9f7c-bb849df4e659",
-          "Required for RF path"
-        ],
-        [
-          "copper_edge_clearance|192254213|132238699|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|e7283df7-443c-43d0-b1bc-c6cc889d4639",
-          "Inherent to footprint"
-        ],
-        [
-          "copper_edge_clearance|192349202|131535878|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|3e7dd08f-23d6-4bb1-b46d-b37edf336fdc",
-          "Inherent to footprint"
-        ],
-        [
-          "copper_edge_clearance|192953867|132332664|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|0c5db515-2ff6-4128-be5a-16f97abcd2c3",
-          "Inherent to footprint"
-        ],
-        [
-          "copper_edge_clearance|193048563|131630781|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|26415795-9437-40b4-b2e5-2dd9b111b8af",
-          "Inherent to footprint"
-        ],
-        [
-          "courtyards_overlap|206155961|135218083|f67e93d1-e993-4084-b976-b0a4bc018398|fda1a8b8-63de-47d7-9770-8b77762576ae",
-          "Required for RF path"
-        ],
-        [
-          "courtyards_overlap|209519432|134258083|89cd0b09-cbde-4369-8731-e64c43b6f946|bbd4d5ce-e099-44ee-b61e-a8ef61296221",
-          "Not relevant"
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -211,6 +178,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -222,6 +190,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -233,6 +202,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
