@@ -75,6 +75,11 @@ jobs:
             sudo apt install --yes imagemagick inkscape xvfb fonts-noto-core python3-pip
             pip install --break-system-packages -r "${TOOLS_PATH}/requirements.txt"
 
+      - name: Set up KiCad libraries
+        run: |
+            mkdir -p ~/.config/kicad
+            cp -ru /home/kicad/.config/kicad/* ~/.config/kicad/
+
       - parallel:
         - name: Generate visual diff
           run: |
