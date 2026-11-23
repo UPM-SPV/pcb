@@ -181,8 +181,11 @@ def img_diff(before: np.ndarray, after: np.ndarray) -> Tuple[np.ndarray, str]:
 	if before.shape != after.shape:
 		after = cv2.resize(after, before.shape)
 
-	_, before_inv = cv2.threshold(before, 200, 255, cv2.THRESH_BINARY_INV)
-	_, after_inv = cv2.threshold(after, 200, 255, cv2.THRESH_BINARY_INV)
+	before_gray = cv2.cvtColor(before, cv2.COLOR_BGR2GRAY)
+	after_gray = cv2.cvtColor(after, cv2.COLOR_BGR2GRAY)
+
+	_, before_inv = cv2.threshold(before_gray, 200, 255, cv2.THRESH_BINARY_INV)
+	_, after_inv = cv2.threshold(after_gray, 200, 255, cv2.THRESH_BINARY_INV)
 
 	same = cv2.bitwise_and(before_inv, after_inv)
 	deleted = cv2.subtract(before_inv, after_inv)

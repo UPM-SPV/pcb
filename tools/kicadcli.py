@@ -197,7 +197,7 @@ def _kicad_render(root_file: pathlib.Path, command: List[str]) -> Dict[str, List
 				f"{tempdir}/{svg_file}", f"{tempdir}/{png_file}"
 			]
 		)
-		image = cv2.imread(f"{tempdir}/{png_file}", cv2.IMREAD_GRAYSCALE)
+		image = cv2.imread(f"{tempdir}/{png_file}", cv2.IMREAD_COLOR)
 		images[object_name.removeprefix(f"{project_name}-")] = image
 
 	shutil.rmtree(tempdir)
