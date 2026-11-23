@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.0,
+          "height": 5.0,
+          "width": 5.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -60,11 +60,11 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.2,
+          "min_clearance": 0.0,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
-          "pad_connection": 1,
-          "remove_islands": 0,
+          "min_thickness": 0.1,
+          "pad_connection": 2,
+          "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -76,7 +76,72 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "annular_width|172864432|106243085|cb7d2095-3b3d-4ec2-a1bf-26623d35337a|00000000-0000-0000-0000-000000000000",
+          "False positive"
+        ],
+        [
+          "clearance|134594773|112000000|7dff5242-5b28-41f0-935d-ed0e7f2ccb56|a95c7ae4-4636-4d44-8d59-f86e62d575d3",
+          "False positive, only the virtual bounding box violates clearance. The text itself does not."
+        ],
+        [
+          "copper_edge_clearance|155254213|100738699|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|e7283df7-443c-43d0-b1bc-c6cc889d4639",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|155349203|100035879|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|0c5db515-2ff6-4128-be5a-16f97abcd2c3",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|155375321|100684680|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|55b61b50-d772-4506-b993-31e11deca99b",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|155385152|100175153|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|65edfb3a-f25e-4c0d-852e-55e77147577c",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|155915947|100695946|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|f7e32a83-d929-43a4-a97f-fbfb0e7af416",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|155926114|100183885|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|9c0a8194-1017-4499-94da-1063c264f284",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|155953868|100832665|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|3e7dd08f-23d6-4bb1-b46d-b37edf336fdc",
+          "False positive"
+        ],
+        [
+          "copper_edge_clearance|156048562|100130782|7da7d9d9-db60-4b71-9daa-30d25f2d74ad|26415795-9437-40b4-b2e5-2dd9b111b8af",
+          "False positive"
+        ],
+        [
+          "courtyards_overlap|169155961|103718083|f67e93d1-e993-4084-b976-b0a4bc018398|fda1a8b8-63de-47d7-9770-8b77762576ae",
+          "Manufacturable by JLCPCB"
+        ],
+        [
+          "courtyards_overlap|172519432|102758083|89cd0b09-cbde-4369-8731-e64c43b6f946|bbd4d5ce-e099-44ee-b61e-a8ef61296221",
+          "Does not overlap"
+        ],
+        [
+          "items_not_allowed|155361458|89198783|de6c0734-c8a8-4df8-aa9d-20b296ccd7e4|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "items_not_allowed|162972358|108603773|51fa567f-6be8-4400-95ad-0783b6f7ff37|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "items_not_allowed|165263423|101191644|d9561dfd-3599-440b-999c-b5a80f04c941|00000000-0000-0000-0000-000000000000",
+          "Manually allowed"
+        ],
+        [
+          "items_not_allowed|166617960|101768362|bc6be332-1cfd-4997-9f7c-bb849df4e659|00000000-0000-0000-0000-000000000000",
+          "Manually allowed"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -146,7 +211,7 @@
       },
       "rules": {
         "max_error": 0.0015,
-        "min_clearance": 0.1,
+        "min_clearance": 0.09,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.2,
         "min_groove_width": 0.0,
@@ -547,7 +612,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
