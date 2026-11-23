@@ -17,6 +17,7 @@
 !extern/
 !extern/**
 
+!3d_viewer.json
 !tools/
 !tools/**
 __pycache__

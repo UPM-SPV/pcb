@@ -117,6 +117,8 @@ jobs:
 
         - name: Generate 3D renders
           run: |
+            KICAD_CONFIG_DIR="$(find ~/.config/kicad/ -mindepth 1 -maxdepth 1 -type d | head -n1)"
+            cp "new/3d_viewer.json" "${KICAD_CONFIG_DIR}"
             mkdir -p output/
             python3 "${TOOLS_PATH}/kicad-tool.py" render \
               --pro-file "${NEW_KICAD_PRO}" \
