@@ -200,7 +200,7 @@ def img_diff(before: np.ndarray, after: np.ndarray) -> Tuple[np.ndarray, str]:
 	if deleted_pct >= 0.8:
 		status = "removed"
 	elif added_pct >= 0.8:
-		status = "new"
+		status = "added"
 	else:
 		status = "changed"
 
