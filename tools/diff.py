@@ -135,7 +135,7 @@ def diff(
 	for group_name, group in image_groups.items():
 		before = group["before"]
 		after = group["after"]
-		all_keys = set(before.keys()) | set(after.keys())
+		all_keys = list(before | after)
 		group_diff = {}
 
 		for key in all_keys:

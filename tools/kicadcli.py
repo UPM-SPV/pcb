@@ -155,15 +155,16 @@ def render_3d(kicad_pro_path: str, output_path: str, side: str, width: int, heig
 
 def render_sch(kicad_pro_path: str) -> Dict[str, List[np.ndarray]]:
 	sch_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_sch")
-	return _kicad_render(
+	renders = _kicad_render(
 		sch_filename,
 		["kicad-cli", "sch", "export", "svg"]
 	)
+	return dict(sorted(renders.items()))
 
 
 def render_pcb(kicad_pro_path: str, layers: str) -> Dict[str, List[np.ndarray]]:
 	pcb_filename = pathlib.Path(kicad_pro_path).with_suffix("").with_suffix(".kicad_pcb")
-	return _kicad_render(
+	renders = _kicad_render(
 		pcb_filename,
 		[
 			"kicad-cli", "pcb", "export", "svg",
@@ -171,6 +172,9 @@ def render_pcb(kicad_pro_path: str, layers: str) -> Dict[str, List[np.ndarray]]:
 			"--mode-multi"
 		]
 	)
+	layers_filenames = [layer.replace(".", "_") for layer in layers.split(",")]
+	return dict(sorted(renders.items(), key=lambda render: layers_filenames.index(render[0])))
+
 
 
 def _kicad_render(root_file: pathlib.Path, command: List[str]) -> Dict[str, List[np.ndarray]]:
