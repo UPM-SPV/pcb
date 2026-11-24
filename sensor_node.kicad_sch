@@ -4171,8 +4171,8 @@
 		(uuid "f9f08e21-0ad1-49aa-945a-53b05c33665e")
 	)
 	(rectangle
-		(start 107.95 111.125)
-		(end 125.095 127.635)
+		(start 137.16 78.105)
+		(end 154.305 94.615)
 		(stroke
 			(width 0)
 			(type default)
@@ -4313,7 +4313,7 @@
 	)
 	(text "MOUNTING HOLES"
 		(exclude_from_sim no)
-		(at 107.696 110.236 0)
+		(at 136.906 77.216 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4432,12 +4432,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e18c918-00fe-45ca-a7b7-0d2f1dc9574f")
-	)
-	(junction
-		(at 113.03 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3199fd9f-bd94-4f69-b5ac-59d7184fef98")
 	)
 	(junction
 		(at 60.96 82.55)
@@ -4775,7 +4769,7 @@
 	)
 	(polyline
 		(pts
-			(xy 135.255 78.105) (xy 135.255 106.045)
+			(xy 135.255 78.105) (xy 135.255 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4835,7 +4829,7 @@
 	)
 	(polyline
 		(pts
-			(xy 135.255 106.045) (xy 107.95 106.045)
+			(xy 135.255 101.6) (xy 107.95 101.6)
 		)
 		(stroke
 			(width 0)
@@ -5015,7 +5009,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 100.33) (xy 133.35 101.6)
+			(xy 133.35 96.52) (xy 133.35 97.79)
 		)
 		(stroke
 			(width 0)
@@ -5687,7 +5681,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 100.33) (xy 113.03 100.33)
+			(xy 109.22 96.52) (xy 120.65 96.52)
 		)
 		(stroke
 			(width 0)
@@ -5824,16 +5818,6 @@
 			(type default)
 		)
 		(uuid "8e72e73b-41e1-452d-928d-62c269bd0d16")
-	)
-	(wire
-		(pts
-			(xy 113.03 99.06) (xy 113.03 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f3370b4-293a-4f71-bd6e-2c8576a4fb9b")
 	)
 	(polyline
 		(pts
@@ -5977,7 +5961,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 82.55) (xy 109.22 100.33)
+			(xy 109.22 82.55) (xy 109.22 96.52)
 		)
 		(stroke
 			(width 0)
@@ -6117,16 +6101,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 100.33) (xy 120.65 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bd1e9b26-355f-4c9e-a0da-194b97449ee8")
-	)
-	(wire
-		(pts
 			(xy 53.34 87.63) (xy 68.58 87.63)
 		)
 		(stroke
@@ -6208,7 +6182,7 @@
 	)
 	(polyline
 		(pts
-			(xy 107.95 83.82) (xy 107.95 106.045)
+			(xy 107.95 83.82) (xy 107.95 101.6)
 		)
 		(stroke
 			(width 0)
@@ -6348,7 +6322,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 100.33) (xy 133.35 100.33)
+			(xy 130.81 96.52) (xy 133.35 96.52)
 		)
 		(stroke
 			(width 0)
@@ -6706,16 +6680,6 @@
 			(type default)
 		)
 		(uuid "f724f4cb-fef0-40f2-9cd7-32c9c9802778")
-	)
-	(wire
-		(pts
-			(xy 113.03 92.71) (xy 113.03 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7ae1603-f3fc-435c-9cde-690ec34ba935")
 	)
 	(wire
 		(pts
@@ -9370,7 +9334,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 119.38 123.19 180)
+		(at 148.59 90.17 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9381,7 +9345,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e11e81e-7c43-4167-bf36-cc144ca35e0f")
 		(property "Reference" "H4"
-			(at 121.92 121.9199 0)
+			(at 151.13 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9392,7 +9356,7 @@
 			)
 		)
 		(property "Value" "BR"
-			(at 121.92 124.4599 0)
+			(at 151.13 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9403,7 +9367,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.5mm"
-			(at 119.38 123.19 0)
+			(at 148.59 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9414,7 +9378,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 123.19 0)
+			(at 148.59 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9425,7 +9389,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 119.38 123.19 0)
+			(at 148.59 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9436,7 +9400,7 @@
 			)
 		)
 		(property "LCSC Part No." ""
-			(at 119.38 123.19 0)
+			(at 148.59 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10204,7 +10168,7 @@
 	)
 	(symbol
 		(lib_id "power:Earth")
-		(at 133.35 101.6 0)
+		(at 133.35 97.79 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10216,7 +10180,7 @@
 		(fields_autoplaced yes)
 		(uuid "37110f01-665e-4165-bfbe-a05281c91744")
 		(property "Reference" "#PWR016"
-			(at 133.35 107.95 0)
+			(at 133.35 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10227,7 +10191,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 106.68 0)
+			(at 133.35 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10238,7 +10202,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 101.6 0)
+			(at 133.35 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10249,7 +10213,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 101.6 0)
+			(at 133.35 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10260,7 +10224,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 133.35 101.6 0)
+			(at 133.35 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10912,131 +10876,6 @@
 			(project "sensor_node"
 				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd"
 					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 113.03 96.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "503a3d50-f4bc-4c34-911d-5add4f15ae36")
-		(property "Reference" "R7"
-			(at 115.57 94.996 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TBD"
-			(at 115.57 96.774 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Size" "0402"
-			(at 115.57 98.298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part No." ""
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8caa7f94-018a-4103-af9d-f9503643ae2f")
-		)
-		(pin "1"
-			(uuid "c3a2cb8f-ad4e-4ec2-93fb-6d106c15b44b")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd"
-					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -11776,7 +11615,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 125.73 100.33 0)
+		(at 125.73 96.52 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11786,7 +11625,7 @@
 		(dnp no)
 		(uuid "6ce86f85-da38-4cc2-a1d3-e2af05cd0746")
 		(property "Reference" "SW1"
-			(at 125.73 93.472 0)
+			(at 125.73 89.662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11796,7 +11635,7 @@
 			)
 		)
 		(property "Value" "USR"
-			(at 125.73 96.012 0)
+			(at 125.73 92.202 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11806,7 +11645,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
-			(at 125.73 95.25 0)
+			(at 125.73 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11817,7 +11656,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 95.25 0)
+			(at 125.73 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11828,7 +11667,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 125.73 100.33 0)
+			(at 125.73 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11839,7 +11678,7 @@
 			)
 		)
 		(property "KLC_S3.3" ""
-			(at 125.73 100.33 0)
+			(at 125.73 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11850,7 +11689,7 @@
 			)
 		)
 		(property "KLC_S4.1" ""
-			(at 125.73 100.33 0)
+			(at 125.73 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11861,7 +11700,7 @@
 			)
 		)
 		(property "LCSC Part No." "C720477"
-			(at 125.73 100.33 0)
+			(at 125.73 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12247,7 +12086,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 110.49 123.19 180)
+		(at 139.7 90.17 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12258,7 +12097,7 @@
 		(fields_autoplaced yes)
 		(uuid "7fb41b93-080b-4c88-a8f3-cfd849362c3a")
 		(property "Reference" "H3"
-			(at 113.03 121.9199 0)
+			(at 142.24 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12269,7 +12108,7 @@
 			)
 		)
 		(property "Value" "BL"
-			(at 113.03 124.4599 0)
+			(at 142.24 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12280,7 +12119,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.5mm"
-			(at 110.49 123.19 0)
+			(at 139.7 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12291,7 +12130,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 123.19 0)
+			(at 139.7 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12302,7 +12141,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 110.49 123.19 0)
+			(at 139.7 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12313,7 +12152,7 @@
 			)
 		)
 		(property "LCSC Part No." ""
-			(at 110.49 123.19 0)
+			(at 139.7 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15660,7 +15499,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 110.49 115.57 0)
+		(at 139.7 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15671,7 +15510,7 @@
 		(fields_autoplaced yes)
 		(uuid "e46290d3-c226-4c6d-a237-ff53145fb2d4")
 		(property "Reference" "H1"
-			(at 113.03 114.2999 0)
+			(at 142.24 81.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15682,7 +15521,7 @@
 			)
 		)
 		(property "Value" "TL"
-			(at 113.03 116.8399 0)
+			(at 142.24 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15693,7 +15532,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.5mm"
-			(at 110.49 115.57 0)
+			(at 139.7 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15704,7 +15543,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 115.57 0)
+			(at 139.7 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15715,7 +15554,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 110.49 115.57 0)
+			(at 139.7 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15726,7 +15565,7 @@
 			)
 		)
 		(property "LCSC Part No." ""
-			(at 110.49 115.57 0)
+			(at 139.7 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16210,7 +16049,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 119.38 115.57 0)
+		(at 148.59 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16221,7 +16060,7 @@
 		(fields_autoplaced yes)
 		(uuid "f80b9c23-8759-4233-b1f4-6f6eb55c8116")
 		(property "Reference" "H2"
-			(at 121.92 114.2999 0)
+			(at 151.13 81.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16232,7 +16071,7 @@
 			)
 		)
 		(property "Value" "TR"
-			(at 121.92 116.8399 0)
+			(at 151.13 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16243,7 +16082,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.5mm"
-			(at 119.38 115.57 0)
+			(at 148.59 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16254,7 +16093,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 115.57 0)
+			(at 148.59 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16265,7 +16104,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 119.38 115.57 0)
+			(at 148.59 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16276,7 +16115,7 @@
 			)
 		)
 		(property "LCSC Part No." ""
-			(at 119.38 115.57 0)
+			(at 148.59 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16481,83 +16320,6 @@
 			(project "sensor_node"
 				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd"
 					(reference "TP12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 113.03 92.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fe7d8852-1525-415a-be27-3f07ed21eba7")
-		(property "Reference" "#PWR013"
-			(at 113.03 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VDD"
-			(at 113.03 88.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 113.03 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37a7f39b-af6b-4414-8532-70fb02f23df3")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)

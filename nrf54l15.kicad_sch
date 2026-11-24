@@ -3283,12 +3283,6 @@
 		(uuid "3a9b728a-c647-4310-a1cb-315cf104e5dc")
 	)
 	(junction
-		(at 148.59 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3bd77540-f199-45d5-b675-3dda30cd3318")
-	)
-	(junction
 		(at 83.82 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3323,12 +3317,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "94c52c19-27a1-49de-8f87-c42727ec44d1")
-	)
-	(junction
-		(at 148.59 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "995ea2b6-7284-4adc-8033-21de924d7b44")
 	)
 	(junction
 		(at 96.52 50.8)
@@ -3895,16 +3883,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 43.18) (xy 157.48 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6902cc36-4a92-44ac-a94a-f81ca52a191b")
-	)
-	(wire
-		(pts
 			(xy 100.33 22.86) (xy 100.33 27.94)
 		)
 		(stroke
@@ -4215,16 +4193,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 50.8) (xy 157.48 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abee8911-2a97-45d5-995b-eae613f0f934")
-	)
-	(wire
-		(pts
 			(xy 193.04 58.42) (xy 195.58 58.42)
 		)
 		(stroke
@@ -4342,16 +4310,6 @@
 			(type dot)
 		)
 		(uuid "ca3e1cb6-7846-4eff-bb19-51accfb7965a")
-	)
-	(wire
-		(pts
-			(xy 162.56 43.18) (xy 165.1 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca54e2b5-a835-4167-9940-d081ed93e7f0")
 	)
 	(wire
 		(pts
@@ -4502,16 +4460,6 @@
 			(type default)
 		)
 		(uuid "ef426db8-27db-40cb-949e-c4c6ade17ae2")
-	)
-	(wire
-		(pts
-			(xy 162.56 50.8) (xy 165.1 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2145cbc-d64b-4ec1-96da-15fa148d7c40")
 	)
 	(polyline
 		(pts
@@ -7662,85 +7610,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:Earth")
-		(at 165.1 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "14788743-aed4-4742-81bd-dcdd701d25d4")
-		(property "Reference" "#PWR030"
-			(at 165.1 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 165.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "61a0435b-812f-4384-ad60-01b8bddde948")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
-					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 78.74 26.67 0)
 		(mirror y)
@@ -8192,128 +8061,6 @@
 			(project "sensor_node"
 				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
 					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 160.02 43.18 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "1e17e0c9-56cd-4a43-9c44-678d1d72ffb1")
-		(property "Reference" "C12"
-			(at 160.02 37.084 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TBD"
-			(at 160.02 38.862 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 160.02 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 160.02 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Size" "0402"
-			(at 160.02 40.64 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 160.02 43.18 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 160.02 43.18 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part No." ""
-			(at 160.02 43.18 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "577b1541-e69d-4c8e-82db-e54efb5d3f21")
-		)
-		(pin "2"
-			(uuid "7f0b777b-7a8b-4b24-991d-af0095c3e48e")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
-					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -9207,129 +8954,6 @@
 			(project "sensor_node"
 				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
 					(reference "#PWR029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 160.02 50.8 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "60bc9747-35e6-4bd7-a3c0-e0e2c6a17070")
-		(property "Reference" "C13"
-			(at 160.02 56.896 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TBD"
-			(at 160.02 55.118 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 160.02 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 160.02 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Size" "0402"
-			(at 160.02 53.34 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S3.3" ""
-			(at 160.02 50.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.1" ""
-			(at 160.02 50.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part No." ""
-			(at 160.02 50.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f1fc985b-4479-42cf-ab7f-3f0c577622bb")
-		)
-		(pin "2"
-			(uuid "6f576ecc-c276-4350-901c-c5637aa2d787")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
-					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -11497,85 +11121,6 @@
 			(project "sensor_node"
 				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
 					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:Earth")
-		(at 165.1 43.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d4378d02-31ad-43a1-8065-5646bb7fa7b0")
-		(property "Reference" "#PWR028"
-			(at 165.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"Earth\""
-			(at 165.1 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d8595975-9836-433e-b68f-71032996567c")
-		)
-		(instances
-			(project "sensor_node"
-				(path "/c80929a2-f199-4b4f-9c68-9806ce8978fd/6a4285d2-ddc3-4758-bf01-730900619653"
-					(reference "#PWR028")
 					(unit 1)
 				)
 			)
